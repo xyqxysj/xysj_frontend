@@ -1,0 +1,12 @@
+<!--pages/author/author.wxml-->
+<view class="body">
+  <view class="head">
+    <text>声明:</text>
+  </view>
+  <view class="author-image">
+    <image style="width: 600rpx;height:800rpx;" src="../../images/author.jpg"></image>
+  </view>
+  <view class="content" style="margin-top: 20rpx;">
+    <text>此小程序</text>
+  </view>
+</view>

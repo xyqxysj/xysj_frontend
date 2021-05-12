@@ -1,0 +1,12 @@
+/* pages/author/author.wxss */
+.body {
+  padding: 30rpx;
+}
+
+.head {
+  font-weight: bold;
+}
+
+.author-image {
+  text-align: center;
+}

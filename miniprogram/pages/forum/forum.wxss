@@ -1,0 +1,31 @@
+/* pages/forum/forum.wxss */
+.main {
+  width: 100%;
+  height: auto;
+}
+.top {
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.top .btn {
+  margin-top: 50rpx;
+  width: auto;
+  padding: 5rpx 20rpx 5rpx 20rpx;
+  margin-left: 20rpx;
+} 
+.btn-common {
+  border-radius: 20rpx;
+  color: black;
+  border: 1rpx solid black;
+}
+#discover {
+  margin-right: 20rpx;
+}
+#release {
+  display: inline-block;
+  position: absolute;
+  right: 10rpx;
+  top: -30rpx;
+}

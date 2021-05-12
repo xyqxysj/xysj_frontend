@@ -1,0 +1,59 @@
+/* pages/feedback/feedback.wxss */
+
+.suggest_head {
+  padding: 10rpx;
+}
+
+.suggest_content {
+  width: 100%;
+  height: 300rpx;
+}
+
+.content {
+  width: 95%;
+  margin-left: 2%;
+  height: 100%;
+  border: 1rpx solid #b3b0b0;
+  border-radius: 20rpx;
+}
+
+
+.suggest_image {
+  margin-top: 20rpx;
+  padding: 10rpx;
+  padding-top: 50rpx;
+  /* border-top: 1px solid #b3b0b0; */
+}
+
+.images {
+  margin-top: 20rpx;
+}
+
+.images > image {
+  margin-left: 15rpx;
+}
+
+
+.contact_way {
+  margin-top: 30rpx;
+  padding: 10rpx;
+  padding-top: 50rpx;
+  /* border-top: 1px solid #b3b0b0; */
+}
+
+.contact_way .contact {
+  border-bottom: 1px solid #b3b0b0;
+  display: inline-block;
+  width: 70%;
+  margin-left: 10rpx;
+  position: absolute;
+  margin-top: 5rpx;
+}
+
+
+.submit_btn {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 150rpx;
+}

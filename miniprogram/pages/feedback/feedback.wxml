@@ -1,0 +1,28 @@
+<!--pages/feedback/feedback.wxml-->
+<view class="suggest_head">
+  <text>产品建议</text>
+</view>
+<view class="suggest_content">
+  <textarea class="content"  style="border-color:{{suggestColor}}" auto-focus="true" show-confirm-bar="true" placeholder="请输入问题描述" rows="3" bindinput="suggestValue" maxlength="100"></textarea>
+</view>
+
+<view class="suggest_image">
+  <view>
+    <text>相关截图（只限4张）</text>
+  </view>
+  <view class="images">
+      <image wx:for="{{images}}" wx:for-item="item" style="width:150rpx;height:150rpx;" src="{{item.imagePath}}" bindlongpress="deleteImage"
+      data-index="{{index}}" data-id="{{item.fileID}}"></image>
+      <image style="width:150rpx;height:150rpx;border:1px solid #cac6c6;" src="../../images/upload.png" bindtap="pictureUpload" hidden="{{images.length==4}}"></image>
+  </view>
+</view>
+
+<view class="contact_way">
+  <text>联系方式：</text>
+  <input class="contact"  placeholder="QQ、WeChat、Email" bindinput="contactValue"/>
+</view>
+
+<view class="submit_btn">
+  <button type="primary" bindtap="submitFeedback">提交</button>
+</view>
+

@@ -1,0 +1,21 @@
+<!--pages/forum/forum.wxml-->
+<view class="main">
+  <!-- 顶部  -->
+  <!-- <view class="top">
+      <span class="btn discover-span"><button id="discover" class="weui-btn btn-common" bindtap="btn_click" size="mini">发现</button></span>
+      <span class="btn ks-span"><button id="knowledge_shard" class="weui-btn btn-common" size="mini">知识分享</button></span>
+      <span class="btn release-span"><button id="release" class="weui-btn btn-common" size="mini">发布+</button></span>
+  </view> -->
+  <view class="top">
+      <view wx:if="{{d_sty==0}}" id="discover" class="btn btn-common" style="background-color:{{d_bc}};" bindtap="btn_click"><text>发现</text></view>
+      <view wx:if="{{d_sty==1}}" id="discover" class="btn btn-common" style="background-color:{{d_bc}};" bindtap="btn_click"><text>发现</text></view>
+      <view wx:if="{{k_sty==0}}" id="knowledge_shard" class="btn btn-common"  style="background-color:{{k_bc}};" bindtap="btn_click"><text>知识分享</text></view>
+      <view wx:if="{{k_sty==1}}" id="knowledge_shard" class="btn btn-common"  style="background-color:{{k_bc}};" bindtap="btn_click"><text>知识分享</text></view>
+      <view wx:if="{{r_sty==0}}" id="release" class="btn btn-common"><text>发布+</text></view>
+      <view wx:if="{{r_sty==1}}" id="release" class="btn btn-common"><text>发布+</text></view>
+  </view>
+  <!-- 底部内容 -->
+  <view class="bottom">
+
+  </view>
+</view>
