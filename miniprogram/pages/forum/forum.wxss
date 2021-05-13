@@ -29,3 +29,110 @@
   right: 10rpx;
   top: -30rpx;
 }
+
+.bottom {
+  width: 100%;
+  height: auto;
+  margin-top: 30rpx;
+}
+.find_item {
+  width: 100%;
+  border-bottom: 1rpx dashed #b3b0b0;
+}
+.item_top {
+  width: 100%;
+  height: 100rpx;
+  padding: 0 10rpx 0 10rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.top_photo {
+  display: inline-block;
+  width: 100rpx;
+  height: 100rpx;
+}
+.photo {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  border-radius: 50%;
+}
+.top_info {
+  width: 400rpx;
+  height: 100%;
+  flex-direction: column;
+  display: inline-block;
+  margin-left: 10rpx;
+}
+.inner_block {
+  display: inline-block;
+}
+.top_info .person_info {
+  width: 100%;
+  height: 40%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.top_info .person_info .name {
+  height: 100%;
+  width: auto;
+  margin-right: 10rpx;
+}
+.top_info .person_info .gender {
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+
+.top_info .time {
+  width: 100%;
+  height: 40%;
+  font-size: 10px;
+  display: inline-block;
+}
+
+.item_content {
+  width: 100%;
+  height: auto;
+  padding: 20rpx 10rpx 20rpx 20rpx;
+}
+.item_bottom {
+  display: inline-block;
+  width: 100%;
+  height: 70rpx;
+  padding-left: 20%;
+}
+.bottom_like {
+  width: 40%;
+  height: 100%;
+  float: left;
+}
+.like_number {
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: middle;
+}
+.like_picture {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+}
+.bottom_comment {
+  width: 40%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.comment_number {
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+}
+
+.comment_picture {
+  width: 35rpx;
+  height: 35rpx;
+  vertical-align: middle;
+}
+

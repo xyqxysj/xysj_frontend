@@ -16,6 +16,37 @@
   </view>
   <!-- 底部内容 -->
   <view class="bottom">
-
+    <view class="find_item">
+      <view class="item_top">
+        <view class="top_photo">
+          <image class="photo" src="../../images/default_photo.jpg"></image>
+        </view>
+        <view class="top_info">
+          <view class="person_info">
+            <text class="name">我是孙大圣</text>
+            <image class="gender" src="../../images/male.png"></image>
+          </view>
+          <view class="time">
+            <text>2021-05-14 10:00</text>
+          </view>
+        </view>
+        <view class="top_option">
+        </view>
+      </view>
+      <view class="item_content">
+        <text>今天又是糟糕的一天</text>
+      </view>
+      <view class="item_bottom">
+        <view class="bottom_like">
+          <image class="like_picture" src="../../images/unlike.png"></image>
+          <text class="like_number">20</text>
+        </view>
+        <view class="bottom_comment">
+          <image class="comment_picture" src="../../images/comment.png"></image>
+          <text class="comment_number">10</text>
+        </view>
+      </view>
+    </view>
+    
   </view>
 </view>
