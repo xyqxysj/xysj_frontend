@@ -87,7 +87,7 @@
           <text>JVM底层详解</text>
         </view>
         <view class="item_bottom">
-          <view class="bottom_shard" bindtap="shard_item">
+          <view class="bottom_shard">
             <view class="share_text">
               <image class="share_picture" src="../../images/to_share.png"></image>
               <text class="share_number">分享</text>
