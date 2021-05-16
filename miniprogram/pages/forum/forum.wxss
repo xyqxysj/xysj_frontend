@@ -35,7 +35,7 @@
   height: auto;
   margin-top: 30rpx;
 }
-.find_item {
+.find_item,.knowledge_item {
   width: 100%;
   border-bottom: 1rpx dashed #b3b0b0;
 }
@@ -99,15 +99,15 @@
   padding: 20rpx 10rpx 20rpx 20rpx;
 }
 .item_bottom {
-  display: inline-block;
+  display: flex;
+  justify-content: space-around;
   width: 100%;
   height: 70rpx;
-  padding-left: 20%;
 }
 .bottom_like {
-  width: 40%;
   height: 100%;
-  float: left;
+  display: flex;
+  justify-content: center;
 }
 .like_number {
   width: 30rpx;
@@ -120,10 +120,10 @@
   vertical-align: middle;
 }
 .bottom_comment {
-  width: 40%;
   height: 100%;
-  display: inline-block;
   vertical-align: middle;
+  display: flex;
+  justify-content: center;
 }
 .comment_number {
   width: 50rpx;
@@ -135,5 +135,33 @@
   width: 35rpx;
   height: 35rpx;
   vertical-align: middle;
+}
+
+.bottom_shard {
+  height: 100%;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.share_text {
+  z-index: -100;
+}
+.share_number {
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+}
+.share_picture {
+  width: 35rpx;
+  height: 35rpx;
+  vertical-align: middle;
+}
+.share_btn {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0.1;
+  z-index: 9999;
 }
 

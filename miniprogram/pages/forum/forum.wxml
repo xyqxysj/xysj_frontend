@@ -1,52 +1,115 @@
 <!--pages/forum/forum.wxml-->
+<!-- 
+  @desc：论坛页面
+  
+  class属性表示一类标识，多个组件都可以用这个，用 “.class_name”在wxss进行选择
+  id属性表示唯一的标识，页面全局唯一，用 “#id_name”在wxss进行选择
+
+ -->
 <view class="main">
   <!-- 顶部  -->
-  <!-- <view class="top">
-      <span class="btn discover-span"><button id="discover" class="weui-btn btn-common" bindtap="btn_click" size="mini">发现</button></span>
-      <span class="btn ks-span"><button id="knowledge_shard" class="weui-btn btn-common" size="mini">知识分享</button></span>
-      <span class="btn release-span"><button id="release" class="weui-btn btn-common" size="mini">发布+</button></span>
-  </view> -->
   <view class="top">
-      <view wx:if="{{d_sty==0}}" id="discover" class="btn btn-common" style="background-color:{{d_bc}};" bindtap="btn_click"><text>发现</text></view>
-      <view wx:if="{{d_sty==1}}" id="discover" class="btn btn-common" style="background-color:{{d_bc}};" bindtap="btn_click"><text>发现</text></view>
-      <view wx:if="{{k_sty==0}}" id="knowledge_shard" class="btn btn-common"  style="background-color:{{k_bc}};" bindtap="btn_click"><text>知识分享</text></view>
-      <view wx:if="{{k_sty==1}}" id="knowledge_shard" class="btn btn-common"  style="background-color:{{k_bc}};" bindtap="btn_click"><text>知识分享</text></view>
-      <view wx:if="{{r_sty==0}}" id="release" class="btn btn-common"><text>发布+</text></view>
-      <view wx:if="{{r_sty==1}}" id="release" class="btn btn-common"><text>发布+</text></view>
+      <view wx:if="{{which_tab==0}}" id="discover" class="btn btn-common" style="background-color:{{select_bc}};" bindtap="btn_click"><text>发现</text></view>
+      <view wx:elif="{{which_tab==1}}" id="discover" class="btn btn-common" style="background-color:{{unselect_bc}};" bindtap="btn_click"><text>发现</text></view>
+      <view wx:if="{{which_tab==0}}" id="knowledge_shard" class="btn btn-common"  style="background-color:{{unselect_bc}};" bindtap="btn_click"><text>知识分享</text></view>
+      <view wx:elif="{{which_tab==1}}" id="knowledge_shard" class="btn btn-common"  style="background-color:{{select_bc}};" bindtap="btn_click"><text>知识分享</text></view>
+      <view id="release" class="btn btn-common"><text>发布+</text></view>
   </view>
   <!-- 底部内容 -->
   <view class="bottom">
-    <view class="find_item">
-      <view class="item_top">
-        <view class="top_photo">
-          <image class="photo" src="../../images/default_photo.jpg"></image>
-        </view>
-        <view class="top_info">
-          <view class="person_info">
-            <text class="name">我是孙大圣</text>
-            <image class="gender" src="../../images/male.png"></image>
+    <!-- 发现页面 -->
+    <view class="find_page" wx:if="{{tab_type == 1}}">
+      <view class="find_item">
+        <view class="item_top">
+          <view class="top_photo">
+            <image class="photo" src="../../images/default_photo.jpg"></image>
           </view>
-          <view class="time">
-            <text>2021-05-14 10:00</text>
+          <view class="top_info">
+            <view class="person_info">
+              <text class="name">孙悟空</text>
+              <image class="gender" src="../../images/male.png"></image>
+            </view>
+            <view class="time">
+              <text>2021-05-14 10:00</text>
+            </view>
+          </view>
+          <view class="top_option">
           </view>
         </view>
-        <view class="top_option">
+        <view class="item_content">
+          <text>今天又是糟糕的一天</text>
         </view>
-      </view>
-      <view class="item_content">
-        <text>今天又是糟糕的一天</text>
-      </view>
-      <view class="item_bottom">
-        <view class="bottom_like">
-          <image class="like_picture" src="../../images/unlike.png"></image>
-          <text class="like_number">20</text>
-        </view>
-        <view class="bottom_comment">
-          <image class="comment_picture" src="../../images/comment.png"></image>
-          <text class="comment_number">10</text>
+        <view class="item_bottom">
+          <view class="bottom_shard" bindtap="shard_item">
+            <view class="share_text">
+              <image class="share_picture" src="../../images/to_share.png"></image>
+              <text class="share_number">分享</text>
+            </view>
+            <view class="share_btn" data-findid="{{1}}">
+              <button open-type="share" style="width:100%;height:100%;"></button>
+            </view>
+          </view>
+          <view class="bottom_comment">
+            <view>
+              <image class="comment_picture" src="../../images/comment.png"></image>
+              <text class="comment_number">评论</text>
+            </view>
+          </view>
+          <view class="bottom_like">
+            <view>
+              <image class="like_picture" src="../../images/unlike.png"></image>
+              <text class="like_number">点赞</text>
+            </view>
+          </view>
         </view>
       </view>
     </view>
-    
+    <!-- 知识分享页面 -->
+    <view class="knowledge_page" wx:elif="{{tab_type == 2}}">
+      <view class="knowledge_item">
+        <view class="item_top">
+          <view class="top_photo">
+            <image class="photo" src="../../images/girl.jpg"></image>
+          </view>
+          <view class="top_info">
+            <view class="person_info">
+              <text class="name">猪八戒</text>
+              <image class="gender" src="../../images/male.png"></image>
+            </view>
+            <view class="time">
+              <text>2021-05-14 10:00</text>
+            </view>
+          </view>
+          <view class="top_option">
+          </view>
+        </view>
+        <view class="item_content">
+          <text>JVM底层详解</text>
+        </view>
+        <view class="item_bottom">
+          <view class="bottom_shard" bindtap="shard_item">
+            <view class="share_text">
+              <image class="share_picture" src="../../images/to_share.png"></image>
+              <text class="share_number">分享</text>
+            </view>
+            <view class="share_btn" data-findid="{{1}}">
+              <button open-type="share" style="width:100%;height:100%;"></button>
+            </view>
+          </view>
+          <view class="bottom_comment">
+            <view>
+              <image class="comment_picture" src="../../images/comment.png"></image>
+              <text class="comment_number">评论</text>
+            </view>
+          </view>
+          <view class="bottom_like">
+            <view>
+              <image class="like_picture" src="../../images/unlike.png"></image>
+              <text class="like_number">点赞</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
   </view>
 </view>

@@ -5,11 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    d_sty: 0,
-    k_sty: 0,
-    r_sty: 0,
-    d_bc: '#05b8fd4d',
-    k_bc: ''
+    which_tab: 0,
+    unselect_bc: '',
+    select_bc: '#05b8fd4d',
+    tab_type: 1
   },
 
   btn_click: function (e){
@@ -18,20 +17,20 @@ Page({
     console.log(e.currentTarget.id)
     if (e.currentTarget.id == 'discover') {
       that.setData({
-        d_sty: 1,
-        d_bc: '#05b8fd4d',
-        k_sty: 0,
-        k_bc: ''
+        which_tab: 0,
+        tab_type: 1
       });
     } else {
       that.setData({
-        d_sty: 0,
-        d_bc: '',
-        k_sty: 1,
-        k_bc: '#05b8fd4d'
+        which_tab: 1,
+        tab_type: 2
       });
     }
     
+  },
+
+  shard_item: function (e) {
+    console.log(e)
   },
 
   /**
@@ -87,6 +86,13 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    if (res.from === 'button') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: '校友圈',
+      path: '/page/index/index'
+    }
   }
 })
