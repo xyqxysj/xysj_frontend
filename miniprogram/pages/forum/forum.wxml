@@ -37,7 +37,9 @@
           </view>
         </view>
         <view class="item_content">
-          <text>今天又是糟糕的一天</text>
+          <view class="item_details">
+            <text>今天在取经</text>
+          </view>
         </view>
         <view class="item_bottom">
           <view class="bottom_shard" bindtap="shard_item">
@@ -74,17 +76,19 @@
           <view class="top_info">
             <view class="person_info">
               <text class="name">猪八戒</text>
-              <image class="gender" src="../../images/male.png"></image>
+              <image class="gender" src="../../images/female.png"></image>
             </view>
             <view class="time">
-              <text>2021-05-14 10:00</text>
+              <text>2021-05-14 10:24</text>
             </view>
           </view>
           <view class="top_option">
           </view>
         </view>
         <view class="item_content">
-          <text>JVM底层详解</text>
+          <view class="item_details">
+            <text>JVM底层详解</text>
+          </view>
         </view>
         <view class="item_bottom">
           <view class="bottom_shard">

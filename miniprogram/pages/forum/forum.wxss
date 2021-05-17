@@ -96,8 +96,14 @@
 .item_content {
   width: 100%;
   height: auto;
-  padding: 20rpx 10rpx 20rpx 20rpx;
+  display: flex;
+  justify-content: center;
+  padding: 10rpx 0;
 }
+.item_details {
+  width: 95%;
+}
+
 .item_bottom {
   display: flex;
   justify-content: space-around;
